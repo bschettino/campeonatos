@@ -1,0 +1,19 @@
+<h1>Log in</h1>
+
+<%= form_tag sessions_path do %>
+  <p>
+    <%= label_tag :login %><br />
+    <%= text_field_tag :login, params[:login] %>
+  </p>
+  <p>
+    <%= label_tag :senha %><br />
+    <%= password_field_tag :password %>
+  </p>
+  <div>
+
+    <%= submit_tag "Log in", :class =>"orange button"%>
+  <% end %>
+
+  <%=link_to "Cadastrar-se", novo_jogador_path, :class => "orange button"%>
+</div>
+

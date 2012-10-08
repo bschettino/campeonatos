@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Irmandade Desportiva</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/typography.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 6]>
+    <style type="text/css">
+    .clearfix {height: 1%;}
+    img {border: none;}
+    #resol {position:absolute;} body {overflow-x: hidden;}  #mainnav {top:160px;padding-left:70px;} #logo {left:20px;-top:140px;}
+
+    </style>
+    <![endif]-->
+    <!--[if gte IE 7.0]>
+    <style type="text/css">
+    .clearfix {display: inline-block;}
+    </style>
+    <![endif]-->
+    <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css", "application" %>
+    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application" %>
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag :all %>
+    <%= csrf_meta_tag %>
+
+    <script type="text/javascript">
+      function oi(){
+
+      }
+    </script>
+
+  </head>
+  <body>
+    <div id="principal" class="clearfix">
+
+
+      <div id="menu">
+        <div class="botao_menu">
+          <%= link_to "JOGADORES", jogadores_path  %>
+        </div>
+        <div class="botao_menu">
+          <%= link_to "CLUBES", clubes_path  %>
+        </div>
+        <div class="botao_menu">
+          <%= link_to "PARTIDAS", partidas_path  %>
+        </div>
+        <div class="botao_menu">
+          <%= link_to "CAMPEONATOS", campeonatos_path  %>
+        </div>
+      </div>
+
+      <div id="lado_direito">
+        <ul id="avatar">
+          <%= image_tag("photo.gif", :class => "foto") %>
+          <div id="texto-logado">
+            <p>Logado como
+            <p id="nome_jogador">Bruno Schettino</p>
+            </p>
+          </div>
+          <p id="acoes-avatar"><%= link_to 'editar', editar_jogador_path(1) %>  |<%=link_to "sair", log_out_path %></p>
+        </ul>
+
+        <ul id="perfil">
+          <fieldset>
+            <legend class="aboute"> <%= image_tag("aboute_menor.png") %></legend>
+            <div class="texto_fieldset">
+              sheusaheu
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend class="gaimes"> <%= image_tag("games_menor.png") %></legend>
+            <div class="texto_fieldset">
+              sheusaheu
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend class="inscrever"> <%= image_tag("inscrever-te_menor.png") %></legend>
+            <div class="texto_fieldset">
+              sheusaheu
+            </div>
+          </fieldset>
+
+        </ul>
+      </div>
+      <div id="pagina">
+        <div id="marcacao_pagina">
+          <%= yield %>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

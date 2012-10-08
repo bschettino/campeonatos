@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  jogador_id: 1
+  time_id: 1
+  convite_id: 1
+
+two:
+  jogador_id: 1
+  time_id: 1
+  convite_id: 1

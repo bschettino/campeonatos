@@ -1,0 +1,21 @@
+<fieldset>
+  <legend>Dados do Jogador</legend>
+  <p>
+    <b>Nome:</b>
+    <%= @participacao.jogador.nome %>
+  </p>
+
+  <p>
+    <b>Clube:</b>
+    <%= @participacao.clube.nome %>
+  </p>
+</fieldset>
+<table class="partida" id="tabela_futebol_show">
+
+  <th><%= @participacao.jogador.nome %> - <%= @participacao.clube.nome %></th>
+  <th></th>
+
+
+  <%=render 'layouts/estatisticas'%>
+</table>
+<%= link_to 'Voltar', participacoes_path %>

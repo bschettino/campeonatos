@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  vencedor_id: 1
+  campeonato_id: 1
+
+two:
+  vencedor_id: 1
+  campeonato_id: 1

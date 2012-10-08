@@ -1,0 +1,27 @@
+<h1>Editar partida</h1>
+
+
+<%= form_tag(atualizar_partida_path) do %>
+  <% if @partida.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@partida.errors.count, "erro") %> <%= pluralize(@partida.errors.count, "impede") %> que esta partida seja atualizada:</h2>
+      <ul>
+        <% @partida.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= label_tag :nome %>
+    <%= text_field_tag "partida[nome]" %>
+  </div>
+    <%= hidden_field_tag :id, @partida.id %>
+
+  <div class="actions">
+    <%= submit_tag "Atualizar partida", :class => "medium blue button" %>
+  </div>
+<% end %>
+
+

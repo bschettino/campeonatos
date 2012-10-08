@@ -1,0 +1,18 @@
+<h1>Clubes</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th></th>
+  </tr>
+
+  <% @clubes.each do |clube| %>
+    <tr>
+      <td><%= link_to clube.nome, mostrar_clube_path(:id => clube.id)%></td>
+      <td><%= link_to 'Detalhar', mostrar_clube_path(:id => clube.id) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Novo Clube', novo_clube_path %>
+<br />

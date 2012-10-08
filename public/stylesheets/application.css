@@ -1,0 +1,483 @@
+#perfil{
+    padding-top: 10px;
+    margin: 20px 0;
+    width: 95%;
+    height: 90%;
+}
+
+#avatar{
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin: 0px;
+    font-size: 15px;
+    width: 80%;
+    height: 10%;
+    -moz-border-top-left-radius:0px
+        -moz-border-bottom-left-radius:0px
+        -webkit-border-top-left-radius:0px
+        -webkit-border-bottom-left-radius:0px
+        border-top-left-radius:0px
+        border-bottom-left-radius:0px
+}
+
+#lado_direito{
+    position: fixed;
+    left: 72%;
+    width: 27%;
+    float: right;
+}
+
+#lado_direito ul{
+    background-color: #fff;
+    padding-right: 10px;
+    float: right;
+    border-radius:5px;
+    -moz-border-radius:5px;
+
+}
+
+
+#lado_direito ul li {
+    list-style-type: none;
+}
+
+#lado_direito ul li h2 {
+    height: 33px;
+    font-family: Tahoma;
+    color: #fff;
+    font-size: 18px;
+    line-height: 33px;
+    padding: 0 10px;
+    margin: 0;
+}
+
+#lado_direito ul li ul {
+    margin: 0;
+    color: #fff;
+}
+
+#lado_direito ul li ul li {
+    background: none;
+    margin: 0;
+}
+
+/* cor laranja -> #ff9933 */
+
+#nome_jogador{
+    color: #ff9933;
+    margin-top: -15px;
+}
+
+#texto-logado{
+    position: relative;
+    float: left;
+    left: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+#acoes-avatar{
+    position: relative;
+    float: right;
+    padding: 0;
+    bottom: 0;
+    margin-top: 67px;
+}
+
+#avatar img{
+    /*    padding: 0 5px;*/
+    float:left;
+    /*    border:1px solid #444;*/
+    height: 100%;
+}
+
+
+
+#menu{
+    width: 18%;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    height: 200px;
+    margin-top: 10%;
+    position: fixed;
+    background-color: #ff9933;
+    opacity: 0.85;
+    -moz-border-radius:5px;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+
+}
+
+.botao_menu{
+    width: 95%;
+}
+
+.botao_menu a{
+    width: 95%;
+    letter-spacing: -1px;
+    color: #555555;
+    text-decoration: none;
+    font-weight:800;
+    font-size: 21px;
+    float:left;
+    padding: 2px 10px;
+    border-bottom: 1pt dashed white;
+}
+
+.botao_menu a:hover{
+    width: 95%;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight:bold;
+    font-size: 21px;
+    float:left;
+    padding: 2px 11px;
+    border-bottom: 1pt dashed white;
+}
+
+.botao_menu img{
+    width: 95%;
+    float:left;
+    padding: 5px 10px;
+}
+
+/* FIELDSET E LISTAS DENTRO DE FIELDSETS */
+
+
+#perfil fieldset{
+    font-family: Verdana;
+    background-color: #fff;
+    color: #666666;
+    text-decoration: none;
+    text-align: left;
+    line-height: 1em;
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 10px 0px 20px 0px;
+    margin-bottom:30px;
+    border:2px dashed #ff9933;
+
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 0px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomleft: 0px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 10px;
+
+}
+
+#perfil fieldset ul{
+    margin-left:20px;
+    padding-top: 3px;
+}
+
+#perfil fieldset ul li{
+    font-family: Verdana;
+    text-decoration: none;
+    word-spacing: 0.05em;
+    text-align: left;
+    letter-spacing: 0;
+    line-height: 22px;
+    font-size: 12px;
+
+}
+
+.lista{
+    font-family: Verdana;
+    text-decoration: none;
+    word-spacing: 0.05em;
+    text-align: left;
+    letter-spacing: 0;
+    line-height: 22px;
+    font-size: 12px;
+    margin-left: 30px;
+
+}
+
+.aboute{
+    font-family: 'Trebuchet MS';
+    color: #444;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing:0;
+    position: relative;
+    line-height:1.5em;
+    top:-0.75em;
+    margin-left: -2px;
+}
+
+.gaimes{
+    font-family: 'Trebuchet MS';
+    color: #444;
+    text-align: left;
+    float: right;
+    font-size: 13px;
+    letter-spacing:0;
+    position: relative;
+    line-height:1.5em;
+    top:-1.75em;
+    margin-right: -4px;
+}
+
+.inscrever{
+    font-family: 'Trebuchet MS';
+    color: #444;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing:0;
+    position: relative;
+    line-height:1.5em;
+    top:-1.75em;
+    margin-left: -4px;
+}
+
+.texto_fieldset{
+    margin-left: 5px;
+}
+.pagina-interna{
+    position:relative;
+    width: 100%;
+    background-color: #fff;
+    padding-top: 0;
+}
+
+#pagina{
+    width: 50%;
+    height: 95%;
+    padding-bottom: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-image: none;
+    background-color: #555555;
+    -moz-border-radius:25px;
+    border-radius:25px;
+    color: #ff9933;
+    opacity: 0.95;
+}
+
+#marcacao_pagina{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 5%;
+}
+
+table{
+    padding-top: 20px;
+    padding-bottom: 10%;
+    width:100%;
+}
+
+th {
+    font: bold 13px "Trebuchet MS", Verdana, Arial, Helvetica,
+        sans-serif;
+    color: #6D929B;
+    border: 1px solid #C1DAD7;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 6px 6px 6px 12px;
+}
+
+td {
+    border-right: 1px solid #C1DAD7;
+    border-bottom: 1px solid #C1DAD7;
+    background: #fff;
+    padding: 6px 6px 6px 12px;
+    font: bold 12px "Trebuchet MS", Verdana, Arial, Helvetica,
+        sans-serif;
+}
+
+p{
+    font-size: 14px;
+    padding: 5px;
+}
+
+.botao{
+    padding:10px;
+    background-color: #EAE8E8;
+    text-decoration: none;
+    color:#666;
+    font-weight: 500;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.botaoHover {
+    padding:10px;
+    background-color: #CCC;
+    color:#000;
+    font-weight: 500;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.button, .button:visited {
+    background: #222 url(../images/alert-overlay.png) repeat-x;
+    display: inline-block;
+    padding: 5px 10px 6px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.button:hover{ background-color: #111; color: #fff; text-decoration: none;}
+.button:active{ top: 1px; }
+.small.button, .small.button:visited { font-size: 11px;}
+.button, .button:visited,
+.medium.button, .medium.button:visited { font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
+.large.button, .large.button:visited { font-size: 14px; padding: 8px 14px 9px; }
+.green.button, .green.button:visited{ background-color: #91bd09; }
+.green.button:hover{ background-color: #749a02; }
+.blue.button, .blue.button:visited{ background-color: #2daebf; }
+.blue.button:hover{ background-color: #007d9a; }
+.red.button, .red.button:visited{ background-color: #e33100; }
+.red.button:hover{ background-color: #872300; }
+.magenta.button, .magenta.button:visited{ background-color: #a9014b; }
+.magenta.button:hover{ background-color: #630030; }
+.orange.button, .orange.button:visited{ background-color: #ff5c00; }
+.orange.button:hover{ background-color: #d45500; }
+.yellow.button, .yellow.button:visited{ background-color: #ffb515; }
+.yellow.button:hover{ background-color: #fc9200; }
+.gray.button, .yellow.button:visited{ background-color: gray; }
+.gray.button:hover{ background-color: gray; }
+
+.laranja{
+    background:-moz-linear-gradient(center top , #F59218 5%, #FF9819 100%) repeat scroll 0 0 #F59218;
+}
+
+#marcacao_pagina h1{
+    text-align: center;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+#marcacao_pagina fieldset {
+    background:#fff !important;
+    padding:20px !important;
+    border:1px solid #EDEDED !important;
+    margin-bottom: 50px !important;
+    margin-top:20px;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    border-radius: 10px !important;
+}
+
+#marcacao_pagina fieldset legend{
+    display:block;
+/*    color:#000;*/
+    font:17px/21px Calibri, Arial, Helvetica, sans-serif;
+    padding:0 10px;
+    margin:-26px 0 0 -11px;
+    font-weight:bold;
+}
+
+.field {
+    clear: both;
+    min-height: 34px;
+    padding:10px 0px 10px 20px;
+    position: relative;
+    display:inline;
+}
+
+.field:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } /* self-clearing */
+
+.field input,
+.field select,
+.field textarea { height: 30px; }
+
+
+.field label {
+    display:inline-block;
+    padding-top: 0.2em;
+    padding-left: 5px;
+    font-family: 'Trebuchet MS',Arial;
+    margin: 2px 0 6px 0;
+    text-align: left;
+    font-size: 15px;
+    color:#666;
+    font-weight:bold;
+}
+.field input[type=text],
+.field input[type=password],
+
+.field textarea,
+.field div.display_text,
+.field select {
+    padding: 3px 9px;
+    height: 15px;
+    position: relative;
+    z-index: 2;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-size: 13px;
+    border: 2px solid #ff9933;
+    margin-right:10px;
+}
+
+
+.field input[disabled=disabled] { color: #999; background-color: #eee; }
+
+.field select { height: 30px; min-width: 30px }
+
+.field.time select,  li.field.datetime select,  li.field.date select { float: none; }
+
+.field.error input[type=text],
+.field.error input[type=password],
+.field.error textarea,
+.field.error div.display_text,
+.field.error select { border-color: #b55; }
+
+.partida input[type=text]{
+    width: 20px;
+}
+
+.margem_esquerda{
+    margin-left: 10%;
+    display: inline
+}
+
+.actions{
+    margin-top: 20px;
+}
+
+.dado{
+    color: #555555;
+    font-size: 15px;
+}

@@ -1,0 +1,62 @@
+/*#C1DAD7*/
+
+
+.borda_direita{
+    border-right: 1px solid #FF9933!important
+}
+
+.espaco_cima{
+    padding-top: 20px!important
+}
+#tabela_futebol th{
+    color: #FFF;
+    border: none;
+    border-bottom: 1px solid #FF9933;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+#tabela_futebol td{
+    border: none;
+    color: #ff9933;
+    background-color: transparent;
+    padding-right: 15px;
+}
+
+#tabela_futebol .label{
+    font-family: 'Trebuchet MS',Arial;
+    margin: 2px 0 6px 0;
+    font-size: 15px;
+    font-weight:bold;
+}
+
+
+#tabela_futebol_show th{
+    color: #FFF;
+    border: none;
+    border-bottom: 1px solid #FF9933;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+#tabela_futebol_show td {
+    border: none;
+    background-color: transparent;
+    padding-right: 15px;
+    font-size: 15px;
+    font-weight:bold;
+    margin: 2px 0 6px 0;
+    font-family: 'Trebuchet MS',Arial;
+}
+
+#tabela_futebol_show tr.even{
+    color: #333;
+    background-color:#DDD;
+
+}
+#tabela_futebol_show tr.odd{
+    color: #FF9933;
+    background-color:#222;
+}

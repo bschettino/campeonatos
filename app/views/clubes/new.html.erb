@@ -1,0 +1,26 @@
+<h1>Criar Clube</h1>
+
+
+<%= form_tag(criar_clube_path) do %>
+  <% if @clube.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@clube.errors.count, "erro") %> <%= pluralize(@clube.errors.count, "impede") %> que este clube seja criado:</h2>
+      <ul>
+        <% @clube.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= label_tag :nome %>
+    <%= text_field_tag "clube[nome]" %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "Criar Clube", :class => "medium blue button" %>
+  </div>
+<% end %>
+
+

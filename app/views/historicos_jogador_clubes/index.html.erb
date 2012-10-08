@@ -1,0 +1,19 @@
+<h1>Jogadores</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Login</th>
+    <th></th>
+  </tr>
+
+  <% @jogadores.each do |jogador| %>
+    <tr>
+      <td><%= link_to jogador.nome, mostrar_jogador_path(:id => jogador.id)%></td>
+      <td><%= link_to jogador.login, mostrar_jogador_path(:id => jogador.id) %></td>
+      <td><%= link_to 'Show', mostrar_jogador_path(:id => jogador.id) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br />

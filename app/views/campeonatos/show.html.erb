@@ -1,0 +1,41 @@
+<h1>Olha que viadinho</h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @campeonato.nome %>
+</p>
+<p>
+  <b>Data:</b>
+  <%= @campeonato.data.strftime("%d/%m/%Y") if @campeonato.data%>
+</p>
+
+<div id="tabela_futebol">
+
+  <table>
+    <tr>
+      <th>Jogador 1</th>
+      <th>Jogador 2</th>
+      <th>Placar</th>
+      <th>Data</th>
+      <th></th>
+    </tr>
+
+    <% @campeonato.partidas.each do |partida| %>
+      <tr>
+        <td><%= link_to "#{partida.participacao_1.jogador.nome} (#{partida.participacao_1.clube.nome})", partida.participacao_1.jogador%></td>
+        <td><%= link_to "#{partida.participacao_2.jogador.nome} (#{partida.participacao_2.clube.nome})", partida.participacao_2.jogador%></td>
+        <td><%= "#{partida.gols_p1} x #{partida.gols_p2}"%></td>
+        <td><%= partida.created_at.strftime("%d/%m/%Y")%></td>
+        <td><%= link_to 'Detalhar', mostrar_partida_path(:id => partida.id) %></td>
+      </tr>
+    <% end %>
+  </table>
+
+</div>
+
+
+
+<%= link_to 'Editar', editar_campeonato_path(@campeonato) %> |
+<%= link_to 'Voltar', campeonatos_path %>

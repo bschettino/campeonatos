@@ -1,0 +1,101 @@
+<%= form_for(@filial) do |f| %>
+  <% if @filial.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@filial.errors.count, "error") %> prohibited this filial from being saved:</h2>
+
+      <ul>
+        <% @filial.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :codigo %>
+    <%= f.text_field :codigo %>
+  </div>
+  <div class="field">
+    <%= f.label :nome_fantasia %>
+    <%= f.text_field :nome_fantasia %>
+  </div>
+  <div class="field">
+    <%= f.label :cep %>
+    <%= f.text_field :cep , :id => "endereco_cep" %>
+    <%= button_to_function "Completar CEP", "completar_cep()", :class => "medium blue button" %>
+  </div>
+  <div class="field">
+    <%= f.label :logradouro %>
+    <%= f.text_field :logradouro, :id => "endereco_logradouro" %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_logradouro %>
+    <%= f.text_field :numero_logradouro, :id => "endereco_numero" %>
+  </div>
+  <div class="field">
+    <%= f.label :bairro %>
+    <%= f.text_field :bairro, :id => "endereco_bairro"  %>
+  </div>
+  <div class="field">
+    <%= f.label :municipio %>
+    <%= f.text_field :municipio, :id => "endereco_municipio" %>
+  </div>
+  <div class="field">
+    <%= f.label :sigla_uf %>
+    <%= f.text_field :sigla_uf, :id => "endereco_estado" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :localidade_id %>
+    <%= select("filial", "localidade_id", @localidades.collect {|l| [l.nome,l.id]} , {:include_blank => true} ) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :telefone_ddd %>
+    <%= f.text_field :telefone_ddd %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone_numero %>
+    <%= f.text_field :telefone_numero %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone_ramal %>
+    <%= f.text_field :telefone_ramal %>
+  </div>
+  <div class="field">
+    <%= f.label :fax_ddd %>
+    <%= f.text_field :fax_ddd %>
+  </div>
+  <div class="field">
+    <%= f.label :fax_numero %>
+    <%= f.text_field :fax_numero %>
+  </div>
+  <div class="field">
+    <%= f.label :fax_ramal %>
+    <%= f.text_field :fax_ramal %>
+  </div>
+  <div class="field">
+    <%= f.label :nome_representante %>
+    <%= f.text_field :nome_representante %>
+  </div>
+  <div class="field">
+    <%= f.label :cargo_representante %>
+    <%= f.text_field :cargo_representante %>
+  </div>
+  <div class="field">
+    <%= f.label :ddd_representante %>
+    <%= f.text_field :ddd_representante %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_telefone_representante %>
+    <%= f.text_field :numero_telefone_representante %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_ramal_representante %>
+    <%= f.text_field :numero_ramal_representante %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Salvar Filial", :class => "medium blue button" %>
+  </div>
+<% end %>

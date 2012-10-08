@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  jogador_id: 1
+  torneio_id: 1
+  qtd_pontos: 1
+
+two:
+  jogador_id: 1
+  torneio_id: 1
+  qtd_pontos: 1

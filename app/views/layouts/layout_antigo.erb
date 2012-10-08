@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Irmandade Desportiva</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/typography.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 6]>
+    <style type="text/css">
+    .clearfix {height: 1%;}
+    img {border: none;}
+    #resol {position:absolute;} body {overflow-x: hidden;}  #mainnav {top:160px;padding-left:70px;} #logo {left:20px;-top:140px;}
+    
+    </style>
+    <![endif]-->
+    <!--[if gte IE 7.0]>
+    <style type="text/css">
+    .clearfix {display: inline-block;}
+    </style>
+    <![endif]-->
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <div id="mainwrap" class="wrap">
+      <div id="top-tag">
+        <%div do logo%>
+        </div>
+        <div id="main" class="pagesize">
+          <div id="header" class="clearfix">
+            <div id="search-wrap">
+              <div id="search" class="clearfix">
+                <a href="?"><img src="images/icon_search.gif" alt="Search" /></a>
+                <input type="text" class="input" />
+                <a href="?"><img src="images/flag_french.gif" alt="French" /></a>
+                <a href="?"><img src="images/flag_english.gif" alt="English" /></a>
+              </div>
+            </div>
+            <% flash.each do |type, message| -%>
+              <div class="message <%= type %>">
+                <p><%= message %></p>
+              </div>
+            <% end %>
+            <div id="mainnav" class="vernav">
+              <ul class="clearfix">
+                <li><a href="/" style="margin: 0px 0px 0px 67px;"><span>Home</span></a></li>
+                <li><a href=<%=jogadores_path%>><span>Jogadores</span></a></li>
+                <li><a href="<%=campeonatos_path%>"><span>Campeonatos</span></a></li>
+                <li><a href="<%=convites_path%>"><span>Convites</span></a></li>
+                <li><a href="<%=equipes_path%>"><span>Equipes</span></a></li>
+                <li><a href="<%=modalidades_path%>"><span>Modalidades</span></a></li>
+              </ul>                	
+              <div class="log">
+                <ul>
+                  <% if current_user %>
+                    <li>  Logado como <%= current_user.login %>.</li>
+                    <li><%= link_to "Log out", log_out_path %></li>
+                  <% else %>
+                    <li> <%= link_to "Cadastrar-se", novo_jogador_path %></li>
+                    <li> ou </li>
+                    <li><%= link_to "Logar", log_in_path %></li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="container" class="clearfix">
+            <div class="box-dot"><div class="inner"><div class="inner"><div class="inner"><div class="inner"><div class="inner"><div class="inner clearfix">
+
+
+
+                          <%= yield %>
+
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="spl-wrap" class="wrap">
+        <div id="spl" class="pagesize clearfix">
+          <div id="comments" class="spl-box">
+            <h2>Comments</h2>
+            <div class="box-content">
+              <p>
+                By <strong>kac</strong><br />
+                Curabitur eget ipsum et eros fidosiat seper. Mauris porta facilisis leo...
+              </p>
+              <p>
+                By <strong>kac</strong><br />
+                Curabitur eget ipsum et eros fidosiat seper. Mauris porta facilisis leo...
+              </p>
+              <p>
+                By <strong>kac</strong><br />
+                Curabitur eget ipsum et eros fidosiat seper. Mauris porta facilisis leo...
+              </p>
+            </div>
+          </div>
+          <div id="archives" class="spl-box">
+            <h2>Archives</h2>
+            <div class="box-content">
+              <ul class="archive navicon">
+                <li><a href="?">December 2008</a></li>
+                <li><a href="?">November 2008</a></li>
+                <li><a href="?">October 2008</a></li>
+                <li><a href="?">September 2008</a></li>
+                <li><a href="?"><small>... (view all)</small></a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="myprofile" class="spl-box">
+            <h2>My Profiles</h2>
+            <div class="box-content">
+              <div class="clearfix"><a href="?" class="link-out"><img src="images/icon1.gif" alt="" align="absmiddle" /></a> <a href="?" class="link-out">My Ziki</a></div>
+              <div class="clearfix"><a href="?" class="link-out"><img src="images/icon2.gif" alt="" align="absmiddle" /></a> <a href="?" class="link-out">My Technorati</a></div>
+              <div class="clearfix"><a href="?" class="link-out"><img src="images/icon3.gif" alt="" align="absmiddle" /></a> <a href="?" class="link-out">My Twitter</a></div>
+            </div>
+          </div>
+          <div id="tag-cloud" class="spl-box">
+            <h2>Tags Clouds</h2>
+            <div class="box-content">
+              <img src="images/tag-cloud.gif" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        &copy; Copyright 2009 Company. All rights reserved | <!--BEGIN OF TERMS OF USE. DO NOT EDIT OR DELETE THESE LINES. IF YOU EDIT OR DELETE THESE LINES AN ALERT MESSAGE MAY APPEAR WHEN TEMPLATE WILL BE ONLINE--><strong>css modelos</strong> no <a href="http://www.layouts-templates.com/"><strong>css modelos</strong></a><!--END OF TERMS OF USE-->
+      </div>
+
+    </body>
+  </html>

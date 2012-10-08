@@ -1,0 +1,19 @@
+<h1>Participações</h1>
+
+<table>
+  <tr>
+    <th>Jogador</th>
+    <th>Clube</th>
+    <th></th>
+  </tr>
+
+  <% @participacoes.each do |participacao| %>
+    <tr>
+      <td><%= link_to participacao.jogador.nome, mostrar_jogador_path(:id => participacao.jogador.id)%></td>
+      <td><%= link_to participacao.clube.nome, participacao.clube%></td>
+      <td><%= link_to 'Detalhar', participacao %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br />

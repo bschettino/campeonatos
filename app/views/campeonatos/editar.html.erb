@@ -1,0 +1,31 @@
+<h1>Editar Campeonato</h1>
+
+
+<%= form_tag(atualizar_campeonato_path) do %>
+  <% if @campeonato.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@campeonato.errors.count, "erro") %> <%= pluralize(@campeonato.errors.count, "impede") %> que este campeonato seja atualizado:</h2>
+      <ul>
+        <% @campeonato.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= label_tag :nome %>
+    <%= text_field_tag "campeonato[nome]" %>
+  </div>
+  <div class="field">
+    <%= label_tag :data %>
+    <%=date_select("campeonato", "data")%>
+  </div>
+    <%= hidden_field_tag :id, @campeonato.id %>
+
+  <div class="actions">
+    <%= submit_tag "Atualizar Campeonato", :class => "medium blue button" %>
+  </div>
+<% end %>
+
+

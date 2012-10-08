@@ -1,0 +1,67 @@
+<h1>Criar partida</h1>
+
+
+<%= form_tag(criar_partida_path) do %>
+  <% if @partida.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@partida.errors.count, "erro") %> <%= pluralize(@partida.errors.count, "impede") %> que esta partida seja criada:</h2>
+      <ul>
+        <% @partida.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="field partida" id="tabela_futebol">
+
+    <th></th>
+    <th class="borda_direita">Jogador 1</th>
+    <th>Jogador 2</th>
+
+    <tr>
+      <td class="label espaco_cima">Jogador</td>
+      <td class="borda_direita"><%= select_tag :jogador_1, options_from_collection_for_select(@jogadores, "id", "nome")%></td>
+      <td><%= select_tag :jogador_2, options_from_collection_for_select(@jogadores, "id", "nome")%></td>
+    </tr>
+    <tr>
+      <td class="label">Clube</td>
+      <td class="borda_direita"><%= select_tag :clube_1, options_from_collection_for_select(@clubes, "id", "nome")%></td>
+      <td><%= select_tag :clube_2, options_from_collection_for_select(@clubes, "id", "nome")%></td>
+    </tr>
+    <tr>
+      <td class="label">Gols</td>
+      <td class="borda_direita"><%= text_field_tag "partida[gols_p1]"%></td>
+      <td><%= text_field_tag "partida[gols_p2]"%></td>
+    </tr>
+    <tr>
+      <td class="label">Chutes</td>
+      <td class="borda_direita"><%= text_field_tag "partida[total_chutes_p1]"%></td>
+      <td><%= text_field_tag "partida[total_chutes_p2]"%></td>
+    </tr>
+    <tr>
+      <td class="label">Chutes no alvo</td>
+      <td class="borda_direita"><%= text_field_tag "partida[chutes_no_alvo_p1]"%></td>
+      <td><%= text_field_tag "partida[chutes_no_alvo_p2]"%></td>
+    </tr>
+    <tr>
+      <td class="label">Posse de bola</td>
+      <td class="borda_direita"><%= text_field_tag "partida[posse_bola_p1]"%></td>
+      <td><%= text_field_tag "partida[posse_bola_p2]"%></td>
+    </tr>
+    <tr>
+      <td class="label">Faltas cometidas</td>
+      <td class="borda_direita"><%= text_field_tag "partida[faltas_cometidas_p1]"%></td>
+      <td><%= text_field_tag "partida[faltas_cometidas_p2]"%></td>
+    </tr>
+
+
+
+  </table>
+
+  <div class="actions">
+    <%= submit_tag "Criar partida", :class => "medium blue button" %>
+  </div>
+<% end %>
+
+

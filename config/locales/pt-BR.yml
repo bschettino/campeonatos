@@ -1,0 +1,609 @@
+pt-BR:
+  # formatos de data e hora
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d DE %B"
+      long: "%d DE %B DE %Y"
+
+    day_names: [DOMINGO, SEGUNDA, TERÇA, QUARTA, QUINTA, SEXTA, SÁBADO]
+    abbr_day_names: [DOM, SEG, TER, QUA, QUI, SEX, SÁB]
+    month_names: [~, JANEIRO, FEVEREIRO, MARÇO, ABRIL, MAIO, JUNHO, JULHO, AGOSTO, SETEMBRO, OUTUBRO, NOVEMBRO, DEZEMBRO]
+    abbr_month_names: [~, JAN, FEV, MAR, ABR, MAI, JUN, JUL, AGO, SET, OUT, NOV, DEZ]
+    order: [:day, :month, :year]
+
+  time:
+    formats:
+      default: "%A, %d DE %B DE %Y, %H:%M h"
+      short: "%d/%m, %H:%M h"
+      short_without_hours: "%d/%m/%Y"
+      long: "%A, %d DE %B DE %Y, %H:%M h"
+      long_without_hours: %d DE %B DE %Y
+    am: ''
+    pm: ''
+
+  #will_paginate
+  will_paginate:
+    next_label: Próxima página
+    previous_label: Página anterior
+    page_gap: ...
+    
+  # distancia do tempo em palavras
+  datetime:
+    distance_in_words:
+      half_a_minute: 'meio minuto'
+      less_than_x_seconds:
+        one: 'menos de 1 segundo'
+        other: 'menos de %{count} segundos'
+
+      x_seconds:
+        one: '1 segundo'
+        other: '%{count} segundos'
+
+      less_than_x_minutes:
+        one: 'menos de um minuto'
+        other: 'menos de %{count} minutos'
+
+      x_minutes:
+        one: '1 minuto'
+        other: '%{count} minutos'
+
+      about_x_hours:
+        one: 'aproximadamente 1 hora'
+        other: 'aproximadamente %{count} horas'
+
+      x_days:
+        one: '1 dia'
+        other: '%{count} dias'
+
+      about_x_months:
+        one: 'aproximadamente 1 mês'
+        other: 'aproximadamente %{count} meses'
+
+      x_months:
+        one: '1 mês'
+        other: '%{count} meses'
+
+      about_x_years:
+        one: 'aproximadamente 1 ano'
+        other: 'aproximadamente %{count} anos'
+
+      over_x_years:
+        one: 'mais de 1 ano'
+        other: 'mais de %{count} anos'
+
+      almost_x_years:
+        one: 'quase 1 ano'
+        other: 'quase %{count} anos'
+
+    prompts:
+      year:   "Ano"
+      month:  "Mês"
+      day:    "Dia"
+      hour:   "Hora"
+      minute: "Minuto"
+      second: "Segundos"
+
+  # numeros
+  number:
+    format:
+      precision: 3
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: 'R$'
+        precision: 2
+        format: '%u %n'
+        separator: ','
+        delimiter: '.'
+    percentage:
+      format:
+        delimiter: '.'
+    precision:
+      format:
+        delimiter: '.'
+    human:
+      format:
+        precision: 2
+        delimiter: '.'
+        significant: true
+        strip_unsignificant_zeros: true
+      # number_to_human_size()
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+      # number_to_human()
+      # new in rails 3: please add to other locales
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: "mil"
+          million:
+            one: milhão
+            other: milhões
+          billion:
+            one: bilhão
+            other: bilhões
+          trillion:
+            one: trilhão
+            other: trilhões
+          quadrillion:
+            one: quatrilhão
+            other: quatrilhões
+
+  # Usado no Array.to_sentence
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " e "
+      last_word_connector: " e "
+
+  # ActiveRecord
+  activerecord:
+    models:
+      curso: Curso
+    attributes:
+      edital:
+        visivel: Edital visível ao público?*
+        visivel_dica: Marcando a opção 'Não', as informações deste edital nunca ficarão disponíveis ao público.
+        visivel_true: Sim
+        visivel_false: Não
+        semestre: Semestre*
+      edital_arquivo:
+        arquivo: Anexar arquivo do edital*
+        arquivo_dica: Apenas arquivos no formato PDF, com no máximo 3.0 MB
+        anexo: Anexar documento administrativo
+        descricao: Descrição*
+      curso:
+        nome: Nome*
+        nome_dica: "Informe apenas o nome do curso, sem seu nível/tipo.<br />Ex: Ciências Médicas, Computação"
+        codigo: Código
+        codigo_dica: "O código do curso <br />será gerado automaticamente."
+        area_de_conhecimento_id: Área de Conhecimento*
+        unidade_id: Unidade de Criação*
+        departamento_id: Departamento de Criação
+        localidade_id: Localidade de Criação*
+        grupo: Grupo*
+        codigo_capes: Código CAPES*
+        codigo_capes_dica: "Deve estar no formato 11 números, 1 letra e 1 número.<br />Ex: 31003010.012.M.0"
+        modalidade: Modalidade*
+        financiamento: Financiamento*
+        objetivos: Objetivos
+        clientela: Clientela
+        clientela_dica: Alguma coisa sobre a clientela
+        data_de_criacao: Data de Criação*
+        data_de_vigencia: Data de Vigência*
+        data_de_vigencia_dica: "Data de vigência do nome atual do curso"
+        telefone1: "Telefone 1*"
+        telefone1_dica: "Somente números, incluindo DDD<br />Ex: (21)1234-5678"
+        telefone2: "Telefone 2"
+        telefone2_dica: "Somente números, incluindo DDD<br />Ex: (21)1234-5678"
+        fax: "Fax"
+        fax_dica: "Somente números, incluindo DDD<br />Ex: (21)1234-5678"
+        email: "E-mail*"
+        email_dica: "Informar e-mail institucional"
+        site: "Site"
+        site_dica: "Informar site usando http://<br />Ex: http://www.sistemas.uff.br"
+      curso_departamento:
+        departamento_id: Departamento Associado
+      conceito_capes:
+        conceito: Conceito CAPES Atual*
+        data_de_atribuicao: Data de Atribuição do Conceito CAPES Atual*
+      legislacao:
+        processo_numero: Número do Processo*
+        processo_numero_dica: "Somente números<br />Ex: 23069.123456/78-02"
+      concurso:
+        curso_id: Curso*
+        interinstitucional: MINTER/DINTER*
+        interinstitucional_true: Sim
+        interinstitucional_false: Não
+        localidade_id: Localidade*
+        data_inicio_inscricoes: Data de Início das Inscrições*
+        data_inicio_inscricoes_dica: Data do início do recebimento de inscrições pela coordenação.
+        data_termino_inscricoes: Data de Término das Inscrições*
+        data_termino_inscricoes_dica: Data do término do recebimento de inscrições pela coordenação.
+        data_divulgacao_resultados: Data de Divulgação dos Resultados*
+        data_divulgacao_resultados_dica: Data de divulgação do resultado final do processo seletivo.
+        data_inicio_matriculas: Data de Início das Matrículas*
+        data_inicio_matriculas_dica: Data do início das matrículas de alunos no sistema.
+        data_termino_matriculas: Data de Término das Matrículas*
+        data_termino_matriculas_dica: Data do término das matrículas de alunos no sistema.
+        descricao: Descrição do Processo Seletivo*
+        descricao_dica: "Ex.: Prova, Análise de Projeto, Análise de Currículo e/ou Entrevista etc.<br />Caso haja mais de um, separá-los com ponto-e-vírgula."
+        observacao: Observações
+      local_concurso:
+        concurso_id: Concurso*
+        ies_id: IES*
+        localidade_id: Localidade*
+        polo_id: Polo*
+        numero_vagas: Número de Vagas Totais*
+      disciplina:
+        unidade_id: Unidade Associada*
+        codigo: Código da Disciplina*
+        codigo_dica: "Possui a sigla da unidade mais 4 ou 5 números.<br />Exs.: ABC12345, ABCD1234"
+        nome: Nome*
+        grupo: Grupo*
+        carga_horaria_teorica: Carga Horária Teórica
+        carga_horaria_pratica: Carga Horária Prática
+        carga_horaria_estagio: Carga Horária Estágio
+        data_de_criacao: Data de Criação*
+      endereco:
+        logradouro: Logradouro*
+        numero: Número
+        numero_dica: Somente números
+        complemento: Complemento
+        cep: CEP*
+        cep_dica: Somente números
+        bairro: Bairro*
+        cidade: Cidade*
+        estado: Estado*
+        pais_id: País*
+        campus_id: Campus
+      polo: 
+        observacao: Observação
+      funcionario_coordenacao:
+        vinculacao_id: Vinculação*
+        portaria: Portaria*
+        data_inicio: Data de Início do Mandato*
+        data_fim: Data de Término do Mandato*
+        curso_id: Curso*
+      aluno:
+        doc_cpf_entregue: CPF
+        doc_cpf_entregue_dica: Marque este campo apenas se o aluno tiver enviado a cópia do CPF
+        doc_rg_entregue: RG
+        doc_rg_entregue_dica: Marque este campo apenas se o aluno tiver enviado a cópia do RG
+        doc_diploma_entregue: Diploma
+        doc_diploma_entregue_dica: Marque este campo apenas se o aluno tiver enviado a cópia do diploma
+        doc_ficha_cadastral_entregue: Ficha Cadastral
+        doc_ficha_cadastral_entregue_dica: Marque este campo apenas se o aluno tiver enviado a cópia do ficha cadastral
+        doc_declaracao_de_conclusao_entregue: Declaração de Conclusão e Termo de Compromisso
+        doc_declaracao_de_conclusao_entregue_dica: Marque este campo apenas se o aluno tiver enviado a declaração de conclusão e o termo de compromisso
+        nota_final_processo_seletivo: Nota Final do Processo Seletivo*
+        nota_final_processo_seletivo_dica: Informe um valor entre 0,0 e 10,0.
+        situacao_diploma_diploma: Diploma
+        situacao_diploma_declaracao: Declaração de conclusão e termo de compromisso
+        situacao_diploma_nenhum: Sem diploma e sem declaração
+        situacao_aluno_id: Situação do Aluno
+        situacao_aluno_id_dica: Selecione a Situação do Aluno
+      aluno_idioma:
+        idioma_id: Idioma
+        idioma_id_dica: Selecione o idioma da prova do aluno
+        nota_final: Nota Final
+        nota_final_dica: Utilize quatro caracteres.
+      ficha_de_inscricao:
+        nome: Nome*
+        cpf: CPF*
+        cpf_dica: "Ex: 123456789-10"
+        data_nascimento: Data de Nascimento
+        nacionalidade_id: Nacionalidade
+        naturalidade_id: Naturalidade
+        identidade: Identidade (Brasileira)
+        identidade_dica: "Apenas para identidades emitidas no Brasil."
+        identidade_orgao: Órgão Emissor
+        identidade_orgao_dica: "Exs: Instituto de Identificação Félix Pacheco, Secretaria de Segurança Pública."
+        identidade_estado_id: Unidade Federativa Emissora da Identidade
+        identidade_estado_id_dica: "Apenas para identidades emitidas no Brasil."
+        identidade_estrangeira: Identidade (Estrangeira)
+        identidade_estrangeira_dica: "Apenas para identidades emitidas fora do Brasil."
+        identidade_data_emissao: Data de Emissão da Identidade
+        sexo: Sexo
+        estado_civil: Estado Civil
+        nome_mae: Nome da Mãe*
+        nome_pai: Nome do Pai
+        telefone: Telefone
+        telefone_dica: "Ex: (21) 5555-1234"
+        celular: Celular
+        celular_dica: "Ex: (21) 5555-4321"
+        email: E-mail
+        email_dica: "Ex: exemplo@sti.uff.br"
+        endereco_rua: Logradouro
+        endereco_numero: Número
+        endereco_rua_dica: "Ex: Rua Miguel de Frias, 9"
+        endereco_bairro: Bairro
+        endereco_cep: CEP
+        endereco_cep_dica: "Ex: 12345-123"
+        endereco_cidade_id: Cidade
+
+
+        
+    errors:
+      template:
+        header:
+          one: "Não foi possível gravar %{model}: 1 erro"
+          other: "Não foi possível gravar %{model}: %{count} erros."
+        body: "Por favor, verifique o(s) seguinte(s) campo(s):"
+      messages:
+        record_invalid: "A validação falhou: %{errors}"
+#        inclusion: "não está incluído na lista"
+#        exclusion: "não está disponível"
+#        invalid: "não é válido"
+#        confirmation: "não está de acordo com a confirmação"
+#        accepted: "deve ser aceito"
+#        empty: "não pode ficar vazio"
+#        blank: "não pode ficar em branco"
+#        too_long: "é muito longo (máximo: %{count} caracteres)"
+#        too_short: "é muito curto (mínimo: %{count} caracteres)"
+#        wrong_length: "não possui o tamanho esperado (%{count} caracteres)"
+#        taken: "já está em uso"
+#        not_a_number: "não é um número"
+#        not_an_integer: "não é um número inteiro"
+#        greater_than: "deve ser maior do que %{count}"
+#        greater_than_or_equal_to: "deve ser maior ou igual a %{count}"
+#        equal_to: "deve ser igual a %{count}"
+#        less_than: "deve ser menor do que %{count}"
+#        less_than_or_equal_to: "deve ser menor ou igual a %{count}"
+#        odd: "deve ser ímpar"
+#        even: "deve ser par"
+
+      models:
+        curso:
+          attributes:
+            endereco:
+              invalid: O endereço é inválido
+            endereco_id:
+              blank: O endereço não pode ficar em branco
+            email:
+              blank: O email não pode ficar em branco
+              too_long: A resposta é muito longa, o máximo são 1000 caracteres
+            codigo:
+              blank: O Código não pode ficar em branco
+              invalid: O código está em formato incorreto e/ou já possui algum outro curso com este mesmo código
+              taken: O código já está em uso
+            financiamento:
+              blank: O financiamento deve ser especificado
+              inclusion: O valor selecionado para o financiamento não é válido
+            grupo:
+              blank: O grupo não pode ficar em branco
+              inclusion: O valor selecionado para o grupo não pode é válido
+            nome:
+              blank: O nome não pode ficar em branco
+            sub_grupo:
+              blank: Nível(Curso Stricto) ou Tipo (Curso Lato) não pode ficar em branco
+              inclusion: Nível(Curso Stricto) ou Tipo (Curso Lato) não pode ficar em branco
+            area_de_conhecimento_id:
+              blank: A área de conhecimento deve ser especificada
+            telefone1:
+              blank: O telefone principal deve ser preenchido
+            modalidade:
+              inclusion: O valor selecionado para a modalidade não é válido
+              blank: A modalidade deve ser especificada
+            unidade_id:
+              blank: A unidade não pode ficar em branco
+            localidade_id:
+              blank: A localidade não pode ficar em branco
+            codigo_capes:
+              invalid: O código Capes deve estar no formato de 11 números, 1 letra (M ou D) e 1 número.
+              too_short: O código Capes deve estar no formato de 11 números, 1 letra (M ou D) e 1 número.
+              blank: O código Capes deve ser preenchido.
+              taken: O código Capes já está em uso
+        conceito_capes:
+          attributes:
+            ano_atribuicao:
+              blank: O ano de atribuição não pode ficar em branco
+              too_short: O ano de atribuição não é válido
+        legislacao:
+          attributes:
+            numero:
+              blank: O número não pode ficar em branco
+              too_short: O número é muito baixo
+            processo_numero:
+              blank: O número do processo não pode ficar em branco
+              too_short: O número do processo é muito curto
+              invalid: O número do processo não é válido
+              wrong_length: O número do processo está incorreto
+        edital:
+          attributes:
+            concursos:
+              invalid: Você deve selecionar um concurso válido
+            anexo_file_size:
+              less_than: O anexo deve ser menor que 3.0 MB
+            ano:
+              blank: O ano não pode ficar em branco
+              invalid: O ano não é válido
+            fluxo_continuo:
+              inclusion: Uma opção deve ser escolhida
+            semestre:
+              blank: O semestre não pode ficar em branco
+              inclusion: O valor informado para o semestre é inválido
+            status:
+              blank: O campo status não pode ficar em branco
+              inclusion: Uma opção deve ser escolhida
+            visivel:
+              inclusion: Uma opção deve ser escolhida
+            edital_arquivos:
+              too_short: Deve ser anexado um edital
+              new_record: Você deve fazer upload de um novo edital.
+        edital_arquivo:
+          attributes:
+            arquivo_file_size:
+              less_than: O edital deve ser menor que 3.0 MB
+            arquivo_file_name:
+              blank: Deve ser anexado um edital
+            edital:
+              blank: O edital não pode ficar em branco
+        aluno:
+          attributes:
+            doc_ficha_cadastral_entregue:
+              inclusion: Não pode ser vazio (verdadeiro ou falso)
+            doc_cpf_entregue:
+              inclusion: Não pode ser vazio (verdadeiro ou falso)
+            doc_diploma_entregue:
+              inclusion: Não pode ser vazio (verdadeiro ou falso)
+            doc_rg_entregue:
+              inclusion: Não pode ser vazio (verdadeiro ou falso)
+            local_concurso:
+              blank: Local Concurso deve ser informado
+            curso:
+              blank: Curso deve ser informado
+            nota_final_processo_seletivo:
+              too_short: Deve conter entre 2 e 4 caracteres (ex 10,0)
+              too_long: Deve conter entre 2 e 4 caracteres (ex 10,0)
+              blank: Não pode ser vazio (ex 10,0)
+        concurso:
+           attributes:
+             locais_concurso:
+               local_empty: Cada concurso deve ter pelo menos um local associado.
+               polo_invalido: Todos os locais associados ao concurso devem ser polos.
+               somente_um: Deve haver somente um local associado
+               falta_ies: Este concurso deve ter uma IES
+               falta_localidade: Este concurso deve ter uma Localidade
+               localidade_duplicada: Localidade Duplicada
+               ies_duplicada: IES Duplicada
+             data_divulgacao_resultados:
+                blank: Data do resultado final não pode ficar em branco
+                on_or_after: Data do resultado final deve ser igual ou posterior a data de fim das inscrições
+                invalid_datetime: Data do resultado final deve ser igual ou posterior a data de fim das inscrições
+             data_inicio_matriculas:
+               blank: Data de início de matricula deve ser preenchido
+               on_or_after: deve ser igual ou posterior a data de divulgação dos resultados
+               inclusion: deve ser igual a data de início das inscrições
+               is_at: A data de início das matrículas deve ser igual a data de inscrição de matrícula
+             data_termino_matriculas:
+               blank: Data de fim de matricula deve ser preenchido
+               on_or_after:  deve ser igual ou posterior a data de início do período de matrícula
+               inclusion: deve ser igual a data de fim das inscrições
+               is_at: Deve ser igual a data de fim das inscrições
+             edital_id:
+                blank: Edital_id não pode ficar em branco
+                invalid: O id de edital não é válido
+             ies_id:
+                blank: O ies_id só pode ficar em branco quando possui localidade
+             localidade_id:
+                blank: A localidade_id só pode ficar em branco quando possui ies
+             data_termino_inscricoes:
+                on_or_after: A data informada não é válida.
+                blank: A data informada não é válida.
+                invalid: A data informada não é válida.
+             data_inicio_inscricoes:
+                on_or_after: A data informada não é válida.
+                blank: A data informada não é válida.
+                invalid: A data informada não é válida.
+             vagas_totais:
+                blank: O número de vagas totais deve ser informado
+                invalid: O número de vagas totais deve ser válido
+                greater_than: O número de vagas totais deve ser válido
+                not_a_number: O número de vagas totais deve ser válido
+             descricao:
+                blank: A descrição do processo seletivo não pode ficar em branco
+        endereco:
+          attributes:
+            cep:
+              blank: O CEP não pode ficar em branco
+              wrong_length: O tamanho está incorreto
+            logradouro:
+              blank: O logradouro não pode ficar em branco
+            bairro:
+              blank: O bairro não pode ficar em branco
+            cidade:
+              blank: A cidade não pode ficar em branco
+            estado:
+              inclusion: O estado não está incluído na lista
+        ficha_de_inscricao:
+          attributes:
+            cpf:
+              blank: O CPF não pode ficar em branco
+              invalid: O CPF está com formato incorreto
+              wrong_length: O tamanho está incorreto
+            endereco_cep:
+              invalid: O CEP está com formato incorreto
+            email:
+              invalid: O e-mail está com formato incorreto
+            telefone:
+              invalid: O telefone está com formato incorreto
+            celular:
+              invalid: O celular está com formato incorreto
+            ddd_celular:
+              invalid: O ddd do celular está com formato incorreto
+              not_a_number: O ddd do celular contém apenas 2 digitos
+            ddd_telefone:
+              invalid: O ddd do telefone está com formato incorreto
+              not_a_number: O ddd do telefone contém apenas 2 digitos
+            data_nascimento:
+              blank: A data de nascimento deve ser preenchida
+            nome_mae:
+              blank: O nome da mãe deve ser preenchido
+            nome:
+              blank: O nome deve ser preenchido
+        polo:
+          attributes:
+            cidade_id:
+              blank: Você deve escolher uma cidade
+        disciplina:
+          attributes:
+            unidade_id:
+              blank: Uma unidade deverá ser selecionada
+            nome:
+              blank: O nome da disciplina não pode ficar em branco
+            codigo:
+              invalid_format: Formato ou sigla de disciplina inválida
+              blank: O código da disciplina não pode ficar em branco
+              taken: Este código já está sendo utilizado
+              invalid: Este código é inválido
+              unidade_nao_correspondente: Código da disciplina não corresponde à unidade selecionada
+            grupo:
+              blank: Selecione Lato ou Stricto Sensu
+            carga_horaria_estagio:
+              ch_total: Pelo menos um tipo de carga horária deve estar preenchido
+            carga_horaria_pratica:
+              ch_total: Pelo menos um tipo de carga horária deve estar preenchido
+            carga_horaria_teorica:
+              ch_total: Pelo menos um tipo de carga horária deve estar preenchido
+        local_concurso:
+          attributes:
+            concurso:
+              blank: Um local concurso deve ter um concurso associado
+            localidade:
+              blank: Deve haver pelo menos um local
+            localidade_id: &locais_concurso_local
+              mutual_exclusion: Você so pode selecionar um tipo de local
+            ies_id: *locais_concurso_local
+            polo_id: *locais_concurso_local
+            concurso:
+              blank: Um concurso deve ser especificado
+            numero_vagas:
+              greater_than: Deve ser maior do que zero
+              blank: Não pode ficar em branco
+              not_a_number: Não é um número
+        funcionario_coordenacao:
+          attributes:
+            coordenador:
+              invalid: Somente um coordenador pode cadastrar funcionários
+            data_inicio:
+              is_at: Data de início do mandato do coordenador deve ser no dia seguinte ao final do mandato anterior
+            data_fim:
+              on_or_after: Data de fim do mandato deve ser igual ou posterior a data de inicio
+            vinculacao:
+              blank: Deve ter uma vinculação associada
+              nao_ativa: Deve ter uma vinculação ativa
+            portaria:
+              blank: Deve ter uma portaria
+            curso:
+              blank: Deve estar associado à um curso
+        idioma:
+          attributes:
+            descricao:
+              blank: Não pode ficar em branco
+              invalid: Um idioma deve conter uma descrição (nome do idioma)
+        aluno_idioma:
+          attributes:
+            idioma_id:
+              blank: Um idioma deve ser selecionado
+            nota_final:
+              blank: Não pode ficar em branco
+              invalid: Nota final deve ter 4 caracteres
+              too_long: Nota final não deve ter mais que 4 caracteres
+            aluno_id:
+              blank: Deve estar associado a um aluno
+        subgrupo:
+          attributes:
+            codigo:
+              inclusion: O código escolhido não é permitido para este grupo

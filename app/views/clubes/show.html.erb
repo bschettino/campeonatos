@@ -1,0 +1,13 @@
+<h1>Olha que viadinho</h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @clube.nome %>
+</p>
+
+
+
+<%= link_to 'Editar', editar_clube_path(@clube) %> |
+<%= link_to 'Voltar', clubes_path %>

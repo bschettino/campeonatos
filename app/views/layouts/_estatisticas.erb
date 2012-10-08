@@ -1,0 +1,161 @@
+
+<%unless @historico.nil?%>
+
+  <tr>
+    <td class="espaco_cima">Jogos </td>
+    <td><%= @historico.qtd_jogos  %></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Vitórias</td>
+    <td><%= @historico.vitorias %></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Empates</td>
+    <td><%= @historico.empates %></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Derrotas:</td>
+    <td><%= @historico.derrotas %></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Aproveitamento:</td>
+    <td> <%= '%.1f' % (((@historico.vitorias*3 + @historico.empates)*100).to_f/(@historico.qtd_jogos*3)) %> % </td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Gols marcados</td>
+    <td><%= @historico.gols_marcados %></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Média de gols marcados por partida</td>
+    <td><%= '%.1f' % (@historico.gols_marcados.to_f/@historico.qtd_jogos)%></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Gols sofridos</td>
+    <td><%= @historico.gols_sofridos %></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Média de gols sofridos por partida</td>
+    <td><%= '%.1f' % (@historico.gols_sofridos.to_f/@historico.qtd_jogos)%></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Total de chutes</td>
+    <td><%= @historico.total_chutes %></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Média de chutes por partida</td>
+    <td><%= '%.1f' % (@historico.total_chutes.to_f/@historico.qtd_jogos)%></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Total de chutes no alvo</td>
+    <td><%= @historico.chutes_no_alvo %></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Média de chutes no alvo por partida</td>
+    <td><%= '%.1f' % (@historico.chutes_no_alvo.to_f/@historico.qtd_jogos)%></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Porcentagem de chutes no alvo</td>
+    <td><%=  '%.1f' % ((@historico.chutes_no_alvo*100).to_f/@historico.total_chutes)%> %</td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Média de posse de bola por partida</td>
+    <td><%= '%.1f' % (@historico.posse_bola.to_f/@historico.qtd_jogos)%> %</td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Faltas cometidas</td>
+    <td><%= @historico.faltas_cometidas %></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Média de faltas cometidas por partida</td>
+    <td><%= '%.1f' % (@historico.faltas_cometidas.to_f/@historico.qtd_jogos)%></td>
+  </tr>
+
+  <%#*<fieldset>%>
+    <%#*<legend>Estatísticas</legend>%>
+    <%#*<p>%>
+      <%#*<b>Jogos:</b>%>
+      <%#= @historico.qtd_jogos %>
+    <%#*</p>%>
+    <%#*<p>%>
+      <%#*<b>Vitórias:</b>%>
+      <%#= @historico.vitorias %>
+    <%#*</p>%>
+    <%#*<p>%>
+      <%#*<b>Empates:</b>%>
+      <%#= @historico.empates %>
+    <%#*</p>%>
+    <%#*<p>%>
+      <%#*<b>Derrotas:</b>%>
+      <%#= @historico.derrotas %>
+    <%#*</p>%>
+    <%#*<p>%>
+      <%#*<b>Aproveitamento:</b>%>
+      <%#= '%.1f' % (((@historico.vitorias*3 + @historico.empates)*100).to_f/(@historico.qtd_jogos*3)) %>%
+    <%#*</p>%>
+    <%#*<p>%>
+      <%#*<b>Gols marcados:</b>%>
+      <%#= @historico.gols_marcados %>
+    <%#*</p>%>
+    <%#*<p>%>
+      <%#*<b>Média de gols marcados por partida:</b>%>
+      <%#= '%.1f' % (@historico.gols_marcados.to_f/@historico.qtd_jogos)%>
+    <%#*</p>%>
+    <%#*<p>%>
+      <%#*<b>Gols sofridos:</b>%>
+      <%#= @historico.gols_sofridos %>
+    <%#*</p>%>
+    <%#*<p>%>
+      <%#*<b>Média de gols sofridos por partida:</b>%>
+      <%#= '%.1f' % (@historico.gols_sofridos.to_f/@historico.qtd_jogos)%>
+    <%#*</p>%>
+    <%#*<p>%>
+      <%#*<b>Total de chutes:</b>%>
+      <%#= @historico.total_chutes %>
+    <%#*</p>%>
+    <%#*<p>%>
+      <%#*<b>Média de chutes por partida:</b>%>
+      <%#= '%.1f' % (@historico.total_chutes.to_f/@historico.qtd_jogos)%>
+    <%#*</p>%>
+
+    <%#*<p>%>
+      <%#*<b>Total de chutes no alvo:</b>%>
+      <%#= @historico.chutes_no_alvo %>
+    <%#*</p>%>
+    <%#*<p>%>
+      <%#*<b>Média de chutes no alvo por partida:</b>%>
+      <%#= '%.1f' % (@historico.chutes_no_alvo.to_f/@historico.qtd_jogos)%>
+    <%#*</p>%>
+    <%#*<p>%>
+      <%#*<b>Porcentagem de chutes no alvo:</b>%>
+      <%#=  '%.1f' % ((@historico.chutes_no_alvo*100).to_f/@historico.total_chutes)%>%
+    <%#*</p>%>
+    <%#*<p>%>
+      <%#*<b>Média de posse de bola por partida:</b>%>
+      <%#= '%.1f' % (@historico.posse_bola.to_f/@historico.qtd_jogos)%>%
+    <%#*</p>%>
+    <%#*<p>%>
+      <%#*<b>Faltas cometidas:</b>%>
+      <%#= @historico.faltas_cometidas %>
+    <%#*</p>%>
+    <%#*<p>%>
+      <%#*<b>Média de faltas cometidas por partida:</b>%>
+      <%#= '%.1f' % (@historico.faltas_cometidas.to_f/@historico.qtd_jogos)%>
+    <%#*</p>%>
+  <%#*</fieldset>%>
+<%end%>

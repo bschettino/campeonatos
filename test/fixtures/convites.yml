@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  convidador_id: 1
+  convidado_id: 1
+  campeonato_id: 1
+  texto_email: MyString
+  tipo_convite: 1
+
+two:
+  convidador_id: 1
+  convidado_id: 1
+  campeonato_id: 1
+  texto_email: MyString
+  tipo_convite: 1

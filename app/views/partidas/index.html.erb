@@ -1,0 +1,26 @@
+<h1>Partidas</h1>
+<div id="tabela_futebol">
+
+  <table>
+    <tr>
+      <th>Jogador 1</th>
+      <th>Jogador 2</th>
+      <th>Placar</th>
+      <th>Data</th>
+      <th></th>
+    </tr>
+
+    <% @partidas.each do |partida| %>
+      <tr>
+        <td><%= link_to "#{partida.participacao_1.jogador.nome} (#{partida.participacao_1.clube.nome})", partida.participacao_1.jogador%></td>
+        <td><%= link_to "#{partida.participacao_2.jogador.nome} (#{partida.participacao_2.clube.nome})", partida.participacao_2.jogador%></td>
+        <td><%= "#{partida.gols_p1} x #{partida.gols_p2}"%></td>
+        <td><%= partida.created_at.strftime("%d/%m/%Y")%></td>
+        <td><%= link_to 'Detalhar', mostrar_partida_path(:id => partida.id) %></td>
+      </tr>
+    <% end %>
+  </table>
+
+</div>
+<%= link_to 'Novo partida', nova_partida_path %>
+<br />

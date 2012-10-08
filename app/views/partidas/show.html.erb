@@ -1,0 +1,53 @@
+<table class="partida" id="tabela_futebol_show">
+
+  <th></th>
+  <th class="borda_direita">Jogador 1</th>
+  <th>Jogador 2</th>
+
+
+  <tr>
+    <td class="espaco_cima">Nome</td>
+    <td class="borda_direita"><%= @partida.participacao_1.jogador.nome %></td>
+    <td><%= @partida.participacao_2.jogador.nome %></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Clube</td>
+    <td class="borda_direita "><%= @partida.participacao_1.clube.nome %></td>
+    <td><%= @partida.participacao_2.clube.nome %></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Gols marcados</td>
+    <td class="borda_direita "><%= @partida.gols_p1 %></td>
+    <td><%= @partida.gols_p2 %></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Total de chutes</td>
+    <td class="borda_direita "><%= @partida.total_chutes_p1 %></td>
+    <td><%= @partida.total_chutes_p2 %></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Chutes no alvo</td>
+    <td class="borda_direita "><%= @partida.chutes_no_alvo_p1 %></td>
+    <td><%= @partida.chutes_no_alvo_p2 %></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Posse de bola</td>
+    <td class="borda_direita "><%= @partida.posse_bola_p1 %></td>
+    <td><%= @partida.posse_bola_p2 %></td>
+  </tr>
+
+  <tr>
+    <td class="espaco_cima">Faltas cometidas</td>
+    <td class="borda_direita "><%= @partida.faltas_cometidas_p1 %></td>
+    <td><%= @partida.faltas_cometidas_p2 %></td>
+  </tr>
+
+</table>
+
+<%= link_to 'Editar', editar_partida_path(@partida) %> |
+<%= link_to 'Voltar', partidas_path %>

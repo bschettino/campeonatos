@@ -1,0 +1,41 @@
+<h1>Editar Jogador
+<%#= breadcrumb([{"Jogadores" => jogadores_path}, {"Editar Jogador #{@jogador.id}" => ""}]) %>
+</h1>
+
+<p>Nesta página é possível editar os dados do jogador.</p>
+
+<%= form_tag atualizar_jogador_path do %>
+  <% if @jogador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@jogador.errors.count, "error") %> prohibited this equipe from being saved:</h2>
+
+      <ul>
+        <% @jogador.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%=label_tag :nome %>
+    <%=text_field_tag :nome, @jogador.nome ,:name=> "jogador[nome]"  %>
+  </div>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, @jogador.email,:name=> "jogador[email]" %>
+  </div>
+
+  <%=hidden_field_tag :id, @jogador.id %>
+  <%=hidden_field_tag :login, @jogador.login,:name=> "jogador[login]" %>
+  <%=hidden_field_tag :password_hash, @jogador.password_hash,:name=> "jogador[password_hash]"%>
+  <%=hidden_field_tag :password_salt, @jogador.password_salt,:name=> "jogador[password_salt]"  %>
+  <%=hidden_field_tag :caminho_foto, @jogador.caminho_foto, :name=> "jogador[caminho_foto]" %>
+  <%=hidden_field_tag :tipo_foto, @jogador.tipo_foto, :name=> "jogador[tipo_foto]" %>
+
+  <div class="actions">
+    <%= link_to 'Voltar', :back %>
+    <%= submit_tag "Atualizar Jogador"%>
+  </div>
+<% end %>
+
